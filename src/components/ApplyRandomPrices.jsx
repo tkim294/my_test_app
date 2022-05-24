@@ -28,6 +28,7 @@ export function ApplyRandomPrices({ selectedItems, onUpdate }) {
       />
     );
     const [mutateFunction, { data, loading, error }] = useMutation(UPDATE_PRICE);
+    
     if (loading) return <Loading />;
   
     if (error) {

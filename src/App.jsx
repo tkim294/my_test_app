@@ -17,6 +17,7 @@ import "@shopify/polaris/build/esm/styles.css";
 import { EmptyStatePage } from "./components/EmptyStatePage";
 import { ProductsPage } from "./components/ProductsPage";
 import { useState } from "react";
+import {OrdersPage} from "./components/OrdersPage";
 
 export default function App() {
   const [selection, setSelection] = useState([]);
@@ -31,11 +32,12 @@ export default function App() {
         }}
       >
         <MyProvider>
-          {selection.length > 0 ?(
+          {/* {selection.length > 0 ?(
             <ProductsPage productIds={selection} />
           ) : (
             <EmptyStatePage setSelection={setSelection}/>
-          )}
+          )} */}
+          <OrdersPage />
         </MyProvider>
       </AppBridgeProvider>
     </PolarisProvider>
